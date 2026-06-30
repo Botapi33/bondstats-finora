@@ -1,0 +1,424 @@
+/* ==========================================================================
+   BondStats Finora
+   File: css/responsive.css
+   ========================================================================== */
+
+/* =========================
+   Large Desktop
+========================= */
+
+@media (min-width:1600px){
+
+:root{
+
+--sidebar-width:340px;
+
+}
+
+.workspace{
+
+max-width:calc(100vw - var(--sidebar-width));
+
+}
+
+.grid-auto{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
+
+gap:24px;
+
+}
+
+}
+
+/* =========================
+   Desktop
+========================= */
+
+@media (max-width:1400px){
+
+.grid-5{
+
+grid-template-columns:repeat(3,minmax(0,1fr));
+
+}
+
+.grid-6{
+
+grid-template-columns:repeat(3,minmax(0,1fr));
+
+}
+
+}
+
+/* =========================
+   Laptop
+========================= */
+
+@media (max-width:1200px){
+
+:root{
+
+--sidebar-width:290px;
+
+}
+
+.topbar{
+
+padding-inline:20px;
+
+}
+
+.card{
+
+padding:20px;
+
+}
+
+.metric-value{
+
+font-size:2.3rem;
+
+}
+
+.grid-4{
+
+grid-template-columns:repeat(2,minmax(0,1fr));
+
+}
+
+.grid-5{
+
+grid-template-columns:repeat(2,minmax(0,1fr));
+
+}
+
+.grid-6{
+
+grid-template-columns:repeat(2,minmax(0,1fr));
+
+}
+
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width:992px){
+
+.app-shell{
+
+grid-template-columns:1fr;
+
+}
+
+.sidebar{
+
+position:fixed;
+
+top:0;
+
+left:-100%;
+
+width:320px;
+
+height:100vh;
+
+transition:.35s;
+
+z-index:999;
+
+}
+
+.sidebar.open{
+
+left:0;
+
+}
+
+.workspace{
+
+width:100%;
+
+}
+
+.topbar{
+
+padding-inline:16px;
+
+}
+
+.mobile-only{
+
+display:flex;
+
+}
+
+.desktop-only{
+
+display:none;
+
+}
+
+.grid-2,
+
+.grid-3,
+
+.grid-4,
+
+.grid-5,
+
+.grid-6{
+
+grid-template-columns:1fr;
+
+}
+
+.section-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.table-wrapper{
+
+overflow-x:auto;
+
+-webkit-overflow-scrolling:touch;
+
+}
+
+.table{
+
+min-width:980px;
+
+}
+
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width:768px){
+
+body{
+
+font-size:15px;
+
+}
+
+.view{
+
+padding:16px;
+
+}
+
+.card{
+
+padding:18px;
+
+border-radius:20px;
+
+}
+
+.metric-card{
+
+min-height:150px;
+
+}
+
+.metric-value{
+
+font-size:2rem;
+
+}
+
+.brand-name{
+
+font-size:1.45rem;
+
+}
+
+.brand-mark{
+
+width:48px;
+
+height:48px;
+
+}
+
+.topbar{
+
+height:68px;
+
+gap:12px;
+
+}
+
+.global-search{
+
+height:44px;
+
+}
+
+.button{
+
+width:100%;
+
+}
+
+.inline{
+
+flex-direction:column;
+
+align-items:stretch;
+
+}
+
+.chart-card{
+
+padding:18px;
+
+}
+
+}
+
+/* =========================
+   Small Phones
+========================= */
+
+@media (max-width:480px){
+
+body{
+
+padding:0;
+
+}
+
+.view{
+
+padding:14px;
+
+}
+
+.card{
+
+padding:16px;
+
+}
+
+.metric-value{
+
+font-size:1.75rem;
+
+}
+
+.section-title{
+
+font-size:1.45rem;
+
+}
+
+.table{
+
+min-width:820px;
+
+}
+
+.icon-button{
+
+width:42px;
+
+height:42px;
+
+}
+
+.button{
+
+height:46px;
+
+}
+
+}
+
+/* =========================
+   Landscape Phones
+========================= */
+
+@media (max-height:650px){
+
+.sidebar{
+
+overflow-y:auto;
+
+}
+
+}
+
+/* =========================
+   Reduced Motion
+========================= */
+
+@media (prefers-reduced-motion:reduce){
+
+*{
+
+animation:none!important;
+
+transition:none!important;
+
+scroll-behavior:auto!important;
+
+}
+
+}
+
+/* =========================
+   Print
+========================= */
+
+@media print{
+
+.sidebar,
+
+.topbar,
+
+.toast,
+
+.loading-overlay{
+
+display:none!important;
+
+}
+
+body{
+
+background:#fff;
+
+color:#000;
+
+}
+
+.card{
+
+box-shadow:none;
+
+border:1px solid #ccc;
+
+break-inside:avoid;
+
+}
+
+.workspace{
+
+width:100%;
+
+}
+
+}
